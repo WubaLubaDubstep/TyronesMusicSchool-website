@@ -1,0 +1,75 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  font-size: x-large;
+  color: black;
+  text-align: center;
+}
+
+/* Modify the background color and text of the nav bar */
+.navbar-custom {
+  background-color: purple;
+  font-family: serif;
+  overflow: hidden;
+  height: 100px;
+}
+
+/* Modify brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav > li > a {
+  color: black;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: grey;
+  font-size: large;
+}
+
+td {
+  height: 60px;
+}
+
+img {
+  height: 50px;
+  width: 60px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  grid-gap: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: medium;
+}
+
+.grid-container > div > form {
+  font-size: small;
+}
+
+.grid-container > div > img {
+  height: 150px;
+  width: 180px;
+}
+
+.posts > img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+/*# sourceMappingURL=main.css.map */

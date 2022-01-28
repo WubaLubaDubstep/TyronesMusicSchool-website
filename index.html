@@ -1,0 +1,124 @@
+<!-- This is a comment in HTML -->
+<!-- Don't worry too much about what's in this file for now, the only this you need to look at is the <script> tag -->
+<!doctype html> 
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="JS/Comments.js"></script>
+    <title>TMS Homepage</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            <img src="Images/Logo.jpg" alt="School Logo">
+            42 Music School
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="html_Pages/About_Us.html">About us</a></li>
+          <li><a href="html_Pages/Contact_Us.html">Contact us</a></li>
+          <li><a href="html_Pages/Save_For_Later.html">Saved for later</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- 
+  This code is the main body of the html page. It contains a 
+  table of the modules and a form to submit for a newsletter and a 
+  radio group button.
+-->
+  <div class="container-fluid">
+    <header>
+      Welcome to 42 online music school.<br>
+      This is a developing music school that aims to grow to accomodate our (hopefully) ever expanding userbase.<br>
+      From beginner to pro, we hope that you stick with us on this journey of progression.<br><br>
+      Available modules
+    </header>
+
+    <div class="module-table">
+      <table>
+        <tr>
+          <td><b>Recommended Order</b></td>
+          <td><b>Module Name</b></td>
+          <td><b>Module Description</b></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="html_Pages/Basic_Notation_1.html">Basic Notation I</a></td>
+          <td>Module Description</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="html_Pages/Basic_Timing_1.html">Basic Timing I</a></td>
+          <td>Module Description</td>
+        </tr>
+      </table>
+    </div>
+
+<!--
+  Container for the radio group button and the newsletter form
+-->
+    <div class="container-fluid">
+      <div class="grid-container">
+          <div>
+              <h3>Would you like to sign up for our newsletter?</h3>
+              <form>
+                <label for="sName">Please enter your name and surname:</label><br>
+                <input type="text" id="sName" name="sName"><br>
+                <lable for="sEmail">Please enter your email addresses:</lable><br>
+                <input type="text" id="sEmail" name="sEmail"><br>
+                <br><input type="submit" value="Submit">
+              </form>
+          </div>
+          <div>
+              <h3>What module would you like to see next?</h3><br>
+              <form>
+                <input type="radio" id="basic rhythms1" name="next_module" value="Basic Rhythms1">
+                <label for="Basic Rhythms1">Basic Rhythms I</label><br>
+                <input type="radio" id="basic notation2" name="next_module" value="Basic Notation2">
+                <label for="basic notation2">Basic Notation II</label><br>
+                <input type="radio" id="basic timing2" name="next_module" value="Basic Timing2">
+                <label for="basic timing2">Basic Timing II</label><br>
+                <br><input type="Submit" value="Submit">
+              </form>
+          </div>
+      </div>
+    </div>
+    
+    <div id="CommentsBox" class="container-fluid">
+      <div class="grid-container">
+        <div id="CommentCreator">
+          <h3>Leave a comment</h3>
+          <form onsubmit="SubmitComment()">
+            <label for="sUsername">Please enter your Username:</label><br>
+            <input type="text" id="sUsername" name="sUsername"><br>
+            <label for="sComment">Enter Your comment</label><br>
+            <input type="text" id="sComment" name="sComment"><br>
+            <br><input type="submit" value="submit">
+          </form>
+        </div>
+        <div id="ViewComments">
+          <h3>User Comments</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- The HTML and JavaScript files for these next two compulsory tasks have been created for you. 
+Have a look at the HTML files for each one to see how they have been linked to the relevant 
+JavaScript files. You will be creating your own HTML and JavaScript files from now on. -->
