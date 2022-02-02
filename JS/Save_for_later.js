@@ -44,7 +44,7 @@ $(function(){
 
     //alert(JSON.stringify(savedimages));
 
-    /*$("img").mouseover(function(event){
+    $("img").mouseover(function(event){
 
         $(`#${event.target.id}btn`).show();
 
@@ -56,25 +56,7 @@ $(function(){
         $(".likebutton").click(function(event){
             $(".likebutton").hide();
         });
-    });*/
-
-    $("img").mouseover(function(event){
-        
-        $(`#${event.target.id}btn`).show();
-
-        $(`#${event.target.id}btn`).mouseover(function(){
-            $(`#${event.target.id}btn`).click(function(){
-                console.log(`.${event.target.id}btn`);
-                likeImage(event);
-                alert("Image Liked");
-            });
-        });
-        
-        $(".likebutton").click(function(event){
-            $(".likebutton").hide();
-        });
     });
-
 
 
     $("img").click(function(event){
