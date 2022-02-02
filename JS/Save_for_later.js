@@ -27,7 +27,11 @@ function saveImage(event){
 };
 
 function likeImage(event){
-
+   let strCount = document.getElementById(`${event.target.id}btnlikecnt`).innerHTML;
+   let iCount = parseInt(strCount);
+   iCount += 1;
+   document.getElementById(`${event.target.id}btnlikecnt`).innerHTML = String(iCount);
+   console.log(iCount); 
 };
 
 $(function(){
@@ -40,16 +44,37 @@ $(function(){
 
     //alert(JSON.stringify(savedimages));
 
-    $("img").mouseover(function(event){
-        console.log(`.${event.target.id}btn`);
+    /*$("img").mouseover(function(event){
+
         $(`#${event.target.id}btn`).show();
+
         $(`#${event.target.id}btn`).click(function(){
+            console.log(`.${event.target.id}btn`);
+            likeImage(event);
             alert("Image Liked");
         });
         $(".likebutton").click(function(event){
             $(".likebutton").hide();
         });
+    });*/
+
+    $("img").mouseover(function(event){
+        
+        $(`#${event.target.id}btn`).show();
+
+        $(`#${event.target.id}btn`).mouseover(function(){
+            $(`#${event.target.id}btn`).click(function(){
+                console.log(`.${event.target.id}btn`);
+                likeImage(event);
+                alert("Image Liked");
+            });
+        });
+        
+        $(".likebutton").click(function(event){
+            $(".likebutton").hide();
+        });
     });
+
 
 
     $("img").click(function(event){
