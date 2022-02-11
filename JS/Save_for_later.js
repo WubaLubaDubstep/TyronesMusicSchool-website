@@ -21,16 +21,16 @@ function saveImage(event){
     else{
         savedimages.push(imgSrc);
         sessionStorage.setItem("arraySavedImages", JSON.stringify(savedimages));
-        alert("Image Saved");
+        alert(`Image Saved. You have ${savedimages.length} saved items`);
         //alert(sessionStorage.getItem("arraySavedImages"));
     }
 };
 
 function likeImage(event){
-   let strCount = document.getElementById(`${event.target.id}btnlikecnt`).innerHTML;
+   let strCount = document.getElementById(`${event.target.id}likecnt`).innerHTML;
    let iCount = parseInt(strCount);
    iCount += 1;
-   document.getElementById(`${event.target.id}btnlikecnt`).innerHTML = String(iCount);
+   document.getElementById(`${event.target.id}likecnt`).innerHTML = String(iCount);
    console.log(iCount); 
 };
 
@@ -48,14 +48,15 @@ $(function(){
 
         $(`#${event.target.id}btn`).show();
 
-        $(`#${event.target.id}btn`).click(function(){
-            console.log(`.${event.target.id}btn`);
-            likeImage(event);
-            alert("Image Liked");
-        });
         $(".likebutton").click(function(event){
             $(".likebutton").hide();
         });
+    });
+
+    $(".likebutton").click(function(event){
+        console.log(`#${event.target.id}`);
+        likeImage(event);
+        alert("Image Liked");
     });
 
 
